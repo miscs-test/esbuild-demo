@@ -1,5 +1,6 @@
 /* Below line works fine with original esbuild, without any plugins */
-@import 'bulma/css/bulma.css';
+/* Below line doesn't work with esbuild-plugin-postcss2 */
+/* @import 'bulma/css/bulma.css'; */
 
 /* body {
   margin: 0;

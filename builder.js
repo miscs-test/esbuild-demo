@@ -2,6 +2,7 @@ const { start } = require('live-server')
 const { watch } = require('chokidar')
 const { build } = require('esbuild')
 const fs = require('fs-extra')
+const postCssPlugin = require('esbuild-plugin-postcss2')
 
 const isDev = process.env.NODE_ENV !== 'production'
 
@@ -36,7 +37,8 @@ const buildParams = {
   bundle: true,
   sourcemap: true,
   logLevel: 'error',
-  incremental: true
+  incremental: true,
+  plugins: [postCssPlugin.default({})]
 }
 ;(async () => {
   fs.removeSync('dist')
