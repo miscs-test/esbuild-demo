@@ -38,7 +38,7 @@ const buildParams = {
   sourcemap: true,
   logLevel: 'error',
   incremental: true,
-  plugins: [postCssPlugin.default({})]
+  // plugins: [postCssPlugin.default({})]
 }
 ;(async () => {
   fs.removeSync('dist')
