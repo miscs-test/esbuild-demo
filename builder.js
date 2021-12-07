@@ -33,11 +33,12 @@ const buildParams = {
   loader: { '.ts': 'tsx' },
   outdir: 'dist',
   minify: !isDev,
-  format: 'cjs',
+  format: 'esm',
   bundle: true,
   sourcemap: true,
   logLevel: 'error',
   incremental: true,
+  splitting: true,
   plugins: [postCssPlugin.default({})]
 }
 ;(async () => {
